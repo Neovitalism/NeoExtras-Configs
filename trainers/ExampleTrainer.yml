@@ -1,0 +1,116 @@
+name: Steve # Name of the NPC.
+location: # The sole reason for the location is the camera. If unspecified, defaults to 0, 0, 0. This always uses the player's world.
+  x: 0
+  y: 0
+  z: 0
+greeting: Hello there!
+win-message: Oh hey, I won!
+lose-message: Ah shoot, I lost!
+win-money: 12
+boss-tier: none # Any boss or none
+battle-ai: default # advanced, aggressive, default, random, tactical - defaults to default.
+evolution-item: none # none, mega, dynamax, both - defaults to none.
+battle-start-commands: # If you have spigot PlaceholderAPI installed, you can use placeholders in commands.
+  - broadcast {player} is now battling {trainer}.
+player-win-commands:
+  - broadcast {player} won against {trainer}!
+player-loss-commands:
+  - broadcast {player} lost against {trainer}..
+rules:
+  level-cap: 100 # defaults to 100
+  raise-to-cap: false # defaults to false.
+  full-heal: false # defaults to false.
+  battle-type: single # single, double, horde, raid, rotation, triple - defaults to single. Results may vary with others.
+  special-evolution: none # mega, dynamax, both, none, sync (syncs with world) - defaults to none.
+  clauses: # removing a clause also sets it to false.
+    bag-clause: false
+    # Trainers cannot use items from their bags during battle.
+    baton-pass-clause: false
+    # Pokémon with the move Beton Pass cannot be used.
+    baton-pass-1-clause: false
+    # Only one Pokémon on a team can have the move beton pass.
+    chatter-clause: false
+    # Pokémon with the move chatter cannot be used.
+    drizzle-clause: false
+    # Pokémon with the ability Drizzle cannot be used.
+    drizzle-swim-clause: false
+    # A team cannot have a Pokémon with the ability Drizzle and another Pokémon with the ability Swift Swim.
+    drought-clause: false
+    # Pokémon with the ability Drought cannot be used.
+    endless-battle-clause: false
+    # Pokémon cannot have a combination of held items, moves, and abilities that would allow a battle to proceed endlessly.
+    evasion-clause: false
+    # Pokémon with the moves Double Team or Minimize cannot be used.
+    evasion-ability-clause: false
+    # Pokémon with abilities that raise evasiveness cannot be used.
+    cannot-forfeit: false
+    # The player cannot forfeit the battle.
+    inverse-battle: false
+    # Type matchups are reversed.
+    item-clause: false
+    # A team cannot have multiple Pokémon with the same held item.
+    legendary-clause: false
+    # Legendary Pokémon cannot be used.
+    mega-clause: false
+    # Mega Evolution cannot be used.
+    moody-clause: false
+    # Pokémon with the ability Moody cannot be used.
+    ohko-clause: false
+    # Pokémon with the moves Fissure, Guillotine, Horn Drill or Sheer Cold cannot be used.
+    species-clause: false
+    # A team cannot have multiple Pokémon that have the same Pokédex number.
+    sand-stream-clause: false
+    # Pokémon with the ability Sand Stream cannot be used.
+    shadow-tag-clause: false
+    # Pokémon with the ability Shadow Tag cannot be used.
+    sky-battle: false
+    # Only airborne Pokémon can be used. Certain ground-reliant moves cannot be used.
+    sleep-clause: false
+    # Only one Pokémon on a team can be asleep at a time.
+    smash-pass-clause: false
+    # Pokémon that have both the moves Shell Smash and Baton Pass cannot be used.
+    snow-warning-clause: false
+    # Pokémon with the ability Snow Warning cannot be used.
+    soul-dew-clause: false
+    # Latias and Latios that are holding a Soul Dew cannot be used.
+    speed-pass-clause: false
+    # Pokémon that have the move Baton Pass, a move/ability that boosts speed, and a move/ability that boosts another stat cannot be used.
+    swagger-clause: false
+    # Pokémon with the move Swagger cannot be used.
+    weather-speed-clause: false
+    # A team cannot have a Pokémon with a weather-setting ability and a Pokémon with an ability that boosts speed when that weather is active.
+team: # Team will randomize if you do not include this.
+  1:
+    species: rattata
+    form: base # defaults to base.
+    level: 11 # defaults to 50.
+    nickname: Rat
+    palette: none # defaults to none.
+    gender: female # randomizes if unset.
+    growth: ordinary # defaults to ordinary.
+    nature: jolly # randomizes if unset.
+    moves: # randomizes if unset.
+      - 'Tackle'
+      - 'Tail Whip'
+      - 'Quick Attack'
+      - 'Bite'
+    ability: guts # randomizes one of the Pokémon's non-HA abilities if unset.
+    held-item: pixelmon:sitrus_berry # remove to declare no held item.
+    ivs: 31/31/31/31/31/31 # defaults to all 31s
+    evs: 0/0/0/0/0/0 # defaults to all 0s
+  2: random # This is how you randomize individual Pokémon.
+  TheseNamesDontMatter: # This is the exact same as team "1".
+    species: rattata
+    level: 11
+    nickname: Rat
+    gender: female
+    nature: jolly
+    moves:
+      - 'Tackle'
+      - 'Tail Whip'
+      - 'Quick Attack'
+      - 'Bite'
+    ability: guts
+    held-item: pixelmon:sitrus_berry
+  Rattata: # This is a level 50 Rattata with default/random settings.
+    species: rattata

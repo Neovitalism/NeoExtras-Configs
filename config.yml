@@ -1,0 +1,28 @@
+prefix: "&#696969[&#6722acN&#793ea5e&#8a599fo&#9c7598E&#ae9191x&#bfac8at&#d1c884r&#e2e37da&#f4ff76s&#696969]&f "
+# The default shiny rate is grabbed from Pixelmon's spawning.yml.
+# This plugin ignores the Ultra Space multiplier in the same config. I may add that functionality in the future, if it's requested.
+shiny-charm-multiplier: 2.0
+exp-charm-multiplier: 2.0
+ticks-to-reboot-global-boosters: 100
+# Ticks until saved global boosters re-start with their time left on server startup. Defaults to 100.
+stack-multipliers: true
+# This does not stack times. Only multipliers (they multiply).
+# Permanent and temporary multipliers ALWAYS stack, as do global and player.
+shiny-booster-affects-legendaries: true
+# Only works on legendaries spawned via the Pixelmon timer.
+shiny-booster-affects-summons: true
+# For every legend that doesn't spawn on the timer. This also includes Ditto from a cloning machine.
+# Note: I physically cannot affect Articuno, Zapdos, Moltres, or Mewtwo/Ditto in 9.0.7. Bug report has been submitted.
+shiny-booster-affects-eggs: true
+# Changes the shiny status on egg creation, not when it's hatched. Broken in 9.0.7. Bug report has been submitted.
+# No eggs will be affected by NeoExtras regardless of this setting right now. Gotta add masuda method in anyways.
+discordsrv-hook: true
+# Requires a reboot to change. Defaults to true. If you do not have DiscordSRV installed, this will disable automatically.
+sprite-on-head-blacklist:
+  - 321 # Wailord
+  - 797 # Celesteela
+# Hopefully self-explanatory. Uses ndex number. This does not affect commands that put the item on your head manually.
+use-sprite-blacklist-as-whitelist: false
+# Makes the above blacklist do the exact opposite and only allow the sprites listed.
+disallow-sprite-message: "&4This sprite is blacklisted from putting on your head."
+# The message a player recieves when attempting to put a sprite on their head.

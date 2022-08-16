@@ -1,0 +1,9 @@
+# DO NOT TOUCH THIS FILE. This file is solely for saving boosts over reboots.
+# Use /<boost> [player/global] [multiplier] to set permanent multipliers. If permanent player multipliers are equal to 1.0, they are removed.
+# Temporary boosts are cleared from this file on startup. This file does not reload on the reload command.
+boosts:
+  permanent:
+    global:
+      shiny: 1.0
+      exp: 1.0
+  temporary: {}

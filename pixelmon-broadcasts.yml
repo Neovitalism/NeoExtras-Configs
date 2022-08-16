@@ -1,0 +1,186 @@
+enabled: true # Setting this to false disables all pixelmon-broadcasts messages.
+discordsrv-hook: true # Setting to false disables ALL discord messages from this config.
+# ------------------------------------------------------------------------------- #
+# Welcome to the all-powerful custom broadcast system!
+# This broadcast system allows you to specify pokemon down to the T in order to specify their messages and colours!
+# You may add and remove as many broadcasts as you want. The spec parser does the rest.
+#
+# Supported identifier specs: (These must be seperated by a dash, and always lowercase.)
+# - species:[speciesName]
+# - form:[formName]
+# - palette:[paletteName]
+# - mythical (Mythicals also fire the legendary message, if you don't define mythical, or the pokemon doesn't fit the spec requirement.)
+# - legendary (If you use mythical, legendary, or ultrabeast in the same identifier, it'll act as "OR".
+# - ultrabeast
+# - shiny
+#
+# Placeholders: - Spigot PAPI placeholders are also supported, but note: they will not parse if for some reason {player} fails.
+# {player} - The name of the player responsible for the action. (Will be nearest player in some cases. If for some reason, this errors out, it'll put "a player")
+# {pokemon} - The name of the pokemon specified in the action.
+# {form} - The name of the pokemon's form. Form and Palette automatically put a space afterwards if they find a non-default value.
+# {palette} - The name of the pokemon's palette.
+# {ivs} - The pokemon's IV percentage out of 100. (##.##% format, not including the percent symbol.)
+# {ivs_rounded} - The pokemon's IV percentage out of 100. (##% format, not including the percent symbol.)
+# {n} - To be put after an "a" character. Changes the "a" to "an" if needbe.
+#
+# Spawning specific placeholders:
+# {x} {y} {z} - The corresponding coordinate to the pokemon's location.
+# {world} - The player's world at the time of the spawn. Returns "a world" if something goes wrong.
+#
+# You can test any broadcast by running '/testbroadcast [type] [specIdentifier]'. I.E. '/testbroadcast spawning shiny-ultrabeast'.
+# The command sends the message both in-game and in discord. Placeholders will NOT parse.
+# "show-player-avatar" will not work unless run by a player.
+# ------------------------------------------------------------------------------- #
+# Cloning machine pokemon do not currenly work in spawning broadcasts. Bug report has been submitted.
+# ------------------------------------------------------------------------------- #
+priority: # This list determines what message the pokemon will use if it fits multiple categories. If you do not add it to this list, it will not be registered.
+  - 'shiny-species:arceus'
+  - 'species:arceus'
+  - 'shiny-mythical'
+  - 'shiny-legendary'
+  - 'shiny-ultrabeast'
+  - 'mythical'
+  - 'legendary'
+  - 'ultrabeast'
+#  - 'shiny-form:alolan-palette:custom-palette:custom--2' # Not gonna actually add this to the default, just showing how it can work.
+# If you need to use a dash in a palette name, use --. Multiple species, forms, and palettes are supported in identifiers.
+  - 'shiny'
+spawning:
+  'shiny-species:arceus': # Note: Arceus by default can only be summoned, not spawned, but it's in the same category.
+    message: '&#FFF784{player} summoned a{n} {palette}{form}Arceus with {ivs}% IVs at {x}, {y}, {z} in world {world}!'
+    discord: # To disable the discord message, remove this section.
+      message: '{player} summoned a{n} {palette}{form}Arceus with {ivs}% IVs at {x}, {y}, {z} in world {world}!'
+      embed:
+        enabled: true
+        color: 'FFF784' # Hex codes only.
+        author: '**{player} summoned a shiny Arceus!**' # Author is different from header. Author goes above the header.
+        footer: 'Courtesy of NeoExtras <3'
+        show-player-avatar: true # Requires the "author" field.
+  'species:arceus':
+    message: '&#B5B5B5{player} summoned a{n} {palette}{form}Arceus with {ivs}% IVs at {x}, {y}, {z} in world {world}!'
+    discord:
+      message: '{player} summoned a{n} {palette}{form}Arceus with {ivs}% IVs at {x}, {y}, {z} in world {world}!'
+      embed:
+        enabled: true
+        color: 'B5B5B5'
+        author: '**{player} summoned an Arceus!**'
+        footer: 'Courtesy of NeoExtras <3'
+        show-player-avatar: true
+  'shiny-mythical':
+    message: '&#7260E5A Mythical {palette}{form}{pokemon} spawned on {player} at {x}, {y}, {z} in world {world}!'
+    discord:
+      message: 'A Mythical {palette}{form}{pokemon} spawned on {player} at {x}, {y}, {z} in world {world}!'
+      embed:
+        enabled: true
+        color: '7260E5'
+        header: '**A Shiny Mythical Pokémon spawned in world {world}!**'
+  'shiny-legendary':
+    message: '&#91F4FFA Legendary {palette}{form}{pokemon} spawned on {player} at {x}, {y}, {z} in world {world}!'
+    discord:
+      message: 'A Legendary {palette}{form}{pokemon} spawned on {player} at {x}, {y}, {z} in world {world}!'
+      embed:
+        enabled: true
+        color: '91F4FF'
+        header: '**A Shiny Legendary Pokémon spawned in world {world}!**'
+  'shiny-ultrabeast':
+    message: '&#9328FFThe Ultra Beast {palette}{form}{pokemon} spawned on {player} at {x}, {y}, {z} in world {world}!'
+    discord:
+      message: 'The Ultra Beast {palette}{form}{pokemon} spawned on {player} at {x}, {y}, {z} in world {world}!'
+      embed:
+        enabled: true
+        color: '9328FF'
+        header: '**A Shiny Ultra Beast spawned in world {world}!**'
+  'mythical':
+    message: '&#4E419EA Mythical {palette}{form}{pokemon} spawned on {player} at {x}, {y}, {z} in world {world}!'
+    discord:
+      message: '**A Mythical {palette}{form}{pokemon} spawned on {player} at {x}, {y}, {z} in world {world}!**'
+      embed:
+        enabled: true
+        color: '4E419E'
+  'legendary':
+    message: '&#38E7FFA Legendary {palette}{form}{pokemon} spawned on {player} at {x}, {y}, {z} in world {world}!'
+    discord:
+      message: '**A Legendary {palette}{form}{pokemon} spawned on {player} at {x}, {y}, {z} in world {world}!**'
+      embed:
+        enabled: true
+        color: '38E7FF'
+  'ultrabeast':
+    message: '&#7320CCThe Ultra Beast {palette}{form}{pokemon} spawned on {player} at {x}, {y}, {z} in world {world}!'
+    discord:
+      message: 'The Ultra Beast {palette}{form}{pokemon} spawned on {player} at {x}, {y}, {z} in world {world}!'
+      embed:
+        enabled: true
+        color: '7320CC'
+  'shiny':
+    message: '&#C6B657A {palette}{form}{pokemon} spawned on {player}!'
+    discord:
+      message: 'A {palette}{form}{pokemon} spawned on {player}!'
+      embed:
+        enabled: true
+        color: 'C6B657'
+catching: # These 3 encompass everything above, and I was lazy.
+  'legendary':
+    message: '&#55FF55{player} caught a{n} {palette}{form}{pokemon} with {ivs}% IVs!'
+    discord:
+      message: '{player} caught a{n} {palette}{form}{pokemon} with {ivs}% IVs!'
+      embed:
+        enabled: true
+        color: '55FF55'
+  'ultrabeast':
+    message: '&#55FF55{player} caught a{n} {palette}{form}{pokemon} with {ivs}% IVs!'
+    discord:
+      message: '{player} caught a{n} {palette}{form}{pokemon} with {ivs}% IVs!'
+      embed:
+        enabled: true
+        color: '55FF55'
+  'shiny':
+    message: '&#55FF55{player} caught a{n} {palette}{form}{pokemon} with {ivs}% IVs!'
+    discord:
+      message: '{player} caught a{n} {palette}{form}{pokemon} with {ivs}% IVs!'
+      embed:
+        enabled: true
+        color: '55FF55'
+defeating:
+  'legendary':
+    message: '&#7F0000{player} defeated the Legendary {palette}{form}{pokemon}...'
+    discord:
+      message: '{player} defeated the Legendary {palette}{form}{pokemon}...'
+      embed:
+        enabled: true
+        color: '7F0000'
+  'ultrabeast':
+    message: '&#7F0000{player} defeated the Ultra Beast {palette}{form}{pokemon}...'
+    discord:
+      message: '{player} defeated the Ultra Beast {palette}{form}{pokemon}...'
+      embed:
+        enabled: true
+        color: '7F0000'
+  'shiny':
+    message: '&#7F0000{player} defeated the {palette}{form}{pokemon}...'
+    discord:
+      message: '{player} defeated the {palette}{form}{pokemon}...'
+      embed:
+        enabled: true
+        color: '7F0000'
+hatching:
+  'legendary':
+    message: '&#38E7FF{player} hatched a Legendary {palette}{form}{pokemon} with {ivs}% IVs!'
+    discord:
+      message: '{player} hatched a Legendary {palette}{form}{pokemon} with {ivs}% IVs!'
+      embed:
+        enabled: true
+        color: '38E7FF'
+  'ultrabeast':
+    message: '&#7320CC{player} hatched the Ultra Beast {palette}{form}{pokemon} with {ivs}% IVs!'
+    discord:
+      message: '{player} hatched the Ultra Beast {palette}{form}{pokemon} with {ivs}% IVs!'
+      embed:
+        enabled: true
+        color: '7320CC'
+  'shiny':
+    message: '&#C6B657{player} hatched a{n} {palette}{form}{pokemon} with {ivs}% IVs!'
+    discord:
+      message: '{player} hatched a{n} {palette}{form}{pokemon} with {ivs}% IVs!'
+      embed:
+        enabled: true
+        color: 'C6B657'

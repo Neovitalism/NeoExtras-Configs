@@ -1,0 +1,80 @@
+notify:
+  # You may add or remove as many as you want, making sure you use -minutes or -seconds. The rest will be ignored.
+  # Global messages broadcast to everyone. Note: Messages will not change on active boosts unless the player logs out or the server restarts.
+  # Personal multipliers do NOT have a discord option. You can add the discord option to any global message.
+  personal-shiny-multiplier:
+    start: '&aYou activated a shiny multiplier of &b{multiplier}x&a for &b{minutes} minutes&a!'
+    5-minutes: '&eYour shiny multiplier of &6{multiplier}x&e will expire in &65 minutes&e!'
+    1-minutes: '&eYour shiny multiplier of &6{multiplier}x&e will expire in &61 minute&e!'
+    5-seconds: '&eYour shiny multiplier of &6{multiplier}x&e will expire in &65 seconds&e!'
+    3-seconds: '&eYour shiny multiplier of &6{multiplier}x&e will expire in &63 seconds&e!'
+    2-seconds: '&eYour shiny multiplier of &6{multiplier}x&e will expire in &62 seconds&e!'
+    1-seconds: '&eYour shiny multiplier of &6{multiplier}x&e will expire in &61 second&e!'
+    expire: '&cYour shiny multiplier of &4{multiplier}x &chas expired!'
+  personal-exp-multiplier:
+    start: '&aYou activated a experience multiplier of &b{multiplier}x&a for &b{minutes} minutes&a!'
+    5-minutes: '&eYour experience multiplier of &6{multiplier}x&e will expire in &65 minutes&e!'
+    1-minutes: '&eYour experience multiplier of &6{multiplier}x&e will expire in &61 minute&e!'
+    5-seconds: '&eYour experience multiplier of &6{multiplier}x&e will expire in &65 seconds&e!'
+    3-seconds: '&eYour experience multiplier of &6{multiplier}x&e will expire in &63 seconds&e!'
+    2-seconds: '&eYour experience multiplier of &6{multiplier}x&e will expire in &62 seconds&e!'
+    1-seconds: '&eYour experience multiplier of &6{multiplier}x&e will expire in &61 second&e!'
+    expire: '&cYour experience multiplier of &4{multiplier}x &chas expired!'
+  global-shiny-multiplier:
+    start:
+      message: '&aA global shiny multiplier of &b{multiplier}x&a has been activated for &b{minutes} minutes&a!'
+      discord: # Get rid of this section to disable.
+        message: 'A global shiny multiplier of {multiplier} has been activated for {minutes} minutes!' # Must always exist for NeoExtras to allow the message.
+        embed: # If you get rid of this section or set "enabled" to false, it will not use an embed.
+          enabled: true
+          color: 55FFFF # Defaults to AAAAAA if you remove.
+          header: '**A global shiny multiplier has been started!**' # Remove this line to disable.
+          footer: 'Courtesy of NeoExtras <3' # Remove this line to disable.
+    5-minutes:
+      message: '&eThe global shiny multiplier of &6{multiplier}x&e will expire in &65 minutes&e!'
+      discord:
+        message: '**The global shiny multiplier of {multiplier} will expire in 5 minutes!**'
+        embed:
+          enabled: true
+          color: FF5555
+    1-minutes: '&eThe global shiny multiplier of &6{multiplier}x&e will expire in &61 minute&e!'
+    5-seconds: '&eThe global shiny multiplier of &6{multiplier}x&e will expire in &65 seconds&e!'
+    3-seconds: '&eThe global shiny multiplier of &6{multiplier}x&e will expire in &63 seconds&e!'
+    2-seconds: '&eThe global shiny multiplier of &6{multiplier}x&e will expire in &62 seconds&e!'
+    1-seconds: '&eThe global shiny multiplier of &6{multiplier}x&e will expire in &61 second&e!'
+    expire:
+      message: '&cThe global shiny multiplier of &4{multiplier}x &chas expired!'
+      discord:
+        message: 'The global shiny multiplier of {multiplier} has expired..'
+        embed:
+          enabled: true
+          color: AA0000
+  global-exp-multiplier:
+    start:
+      message: '&aA global experience multiplier of &b{multiplier}x&a has been activated for &b{minutes} minutes&a!'
+      discord:
+        message: 'A global experience multiplier of {multiplier} has been activated for {minutes} minutes!'
+        embed:
+          enabled: true
+          color: 55FF55
+          header: '**A global experience multiplier has been started!**'
+          footer: 'Courtesy of NeoExtras <3'
+    5-minutes:
+      message: '&eThe global experience multiplier of &6{multiplier}x&e will expire in &65 minutes&e!'
+      discord:
+        message: '**The global experience multiplier of {multiplier} will expire in 5 minutes!**'
+        embed:
+          enabled: true
+          color: FF5555
+    1-minutes: '&eThe global experience multiplier of &6{multiplier}x&e will expire in &61 minute&e!'
+    5-seconds: '&eThe global experience multiplier of &6{multiplier}x&e will expire in &65 seconds&e!'
+    3-seconds: '&eThe global experience multiplier of &6{multiplier}x&e will expire in &63 seconds&e!'
+    2-seconds: '&eThe global experience multiplier of &6{multiplier}x&e will expire in &62 seconds&e!'
+    1-seconds: '&eThe global experience multiplier of &6{multiplier}x&e will expire in &61 second&e!'
+    expire:
+      message: '&cThe global experience multiplier of &4{multiplier}x &chas expired!'
+      discord:
+        message: 'The global shiny multiplier of {multiplier} has expired..'
+        embed:
+          enabled: true
+          color: AA0000

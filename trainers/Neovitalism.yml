@@ -1,0 +1,99 @@
+name: Neovitalism
+greeting: 'o/'
+win-message: Wait, this works?
+lose-message: To be expected.
+win-money: 0
+battle-ai: advanced
+evolution-item: mega
+battle-start-commands:
+  - broadcast {player} is now battling {trainer}.
+player-win-commands:
+  - broadcast {player} won against {trainer}!
+player-loss-commands:
+  - broadcast {player} lost against {trainer}..
+rules:
+  level-cap: 100
+  raise-to-cap: true
+  full-heal: true
+  special-evolution: both
+  clauses:
+    bag-clause: true
+    baton-pass-clause: true
+    endless-battle-clause: true
+    item-clause: true
+    species-clause: true
+    shadow-tag-clause: true
+    sleep-clause: true
+team:
+  Toxapex:
+    species: Toxapex
+    level: 100
+    nature: bold
+    moves:
+      - 'Haze'
+      - 'Recover'
+      - 'Baneful Bunker'
+      - 'Ice Beam'
+    ability: regenerator
+    held-item: pixelmon:black_sludge
+    evs: 248/0/252/0/8/0
+  Calyrex:
+    species: Calyrex
+    form: shadowrider
+    level: 100
+    nature: modest
+    moves:
+      - 'Astral Barrage'
+      - 'Giga Drain'
+      - 'Psychic'
+      - 'Dark Pulse'
+    held-item: pixelmon:assault_vest
+    evs: 248/0/252/8/0/0
+  Ferrothorn:
+    species: Ferrothorn
+    level: 100
+    nature: careful
+    moves:
+      - 'Explosion'
+      - 'Stealth Rock'
+      - 'Spikes'
+      - 'Leech Seed'
+    ability: IronBarbs
+    held-item: pixelmon:rocky_helmet
+    evs: 248/6/128/0/128/0
+  Dragapult:
+    species: Dragapult
+    level: 100
+    nature: adamant
+    moves:
+      - 'Dragon Darts'
+      - 'Dragon Dance'
+      - 'Phantom Force'
+      - 'Steel Wing'
+    ability: Infiltrator
+    held-item: pixelmon:focus_sash
+    evs: 0/252/0/0/4/252
+  Pinsir:
+    species: Pinsir
+    level: 100
+    nature: jolly
+    moves:
+      - 'Quick Attack'
+      - 'X-Scissor'
+      - 'Brick Break'
+      - 'Knock Off'
+    ability: Moxie
+    held-item: pixelmon:pinsirite
+    evs: 0/252/0/0/4/252
+  Diggersby:
+    species: Diggersby
+    level: 100
+    nature: jolly
+    moves:
+      - 'Fire Punch'
+      - 'Earthquake'
+      - 'Knock Off'
+      - 'Swords Dance'
+    ability: HugePower
+    held-item: pixelmon:life_orb
+    evs: 0/252/0/0/4/252
