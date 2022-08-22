@@ -13,6 +13,8 @@ discordsrv-hook: true # Setting to false disables ALL discord messages from this
 # - legendary (If you use mythical, legendary, or ultrabeast in the same identifier, it'll act as "OR".
 # - ultrabeast
 # - shiny
+# - boss (ANY boss tier)
+# - boss:[bossTier] (Specific boss tiers)
 #
 # Placeholders: - Spigot PAPI placeholders are also supported, but note: they will not parse if for some reason {player} fails.
 # {player} - The name of the player responsible for the action. (Will be nearest player in some cases. If for some reason, this errors out, it'll put "a player")
@@ -22,6 +24,8 @@ discordsrv-hook: true # Setting to false disables ALL discord messages from this
 # {ivs} - The pokemon's IV percentage out of 100. (##.##% format, not including the percent symbol.)
 # {ivs_rounded} - The pokemon's IV percentage out of 100. (##% format, not including the percent symbol.)
 # {n} - To be put after an "a" character. Changes the "a" to "an" if needbe.
+# {boss} - The name of the boss tier. I.E. For a legendary boss, this placeholder becomes "legendary".  If the pokemon is not a boss, it returns "".
+# {bossboss} - The name of the boss tier, with boss attatched. I.E. For a legendary boss, this placeholder becomes "legendary boss". If the pokemon is not a boss, it returns "".
 #
 # Spawning specific placeholders:
 # {x} {y} {z} - The corresponding coordinate to the pokemon's location.
