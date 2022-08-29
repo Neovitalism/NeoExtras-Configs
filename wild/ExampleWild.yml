@@ -1,0 +1,32 @@
+ExampleWild: # Identifer used in /pokebattle. Each file can have more than one.
+  species: rattata
+  form: base # defaults to base.
+  level: 10 # defaults to 50.
+  nickname: Rat
+  palette: shiny # defaults to none.
+  gender: female # randomizes if unset.
+  growth: ordinary # defaults to ordinary.
+  nature: jolly # randomizes if unset.
+  moves: # randomizes if unset.
+    - 'Tackle'
+    - 'Tail Whip'
+    - 'Quick Attack'
+    - 'Bite'
+  ability: guts # randomizes one of the Pokémon's non-HA abilities if unset.
+  held-item: pixelmon:sitrus_berry # remove to declare no held item.
+  ivs: 31/31/31/31/31/31 # defaults to all 31s
+  evs: 0/0/0/0/0/0 # defaults to all 0s
+  uncatchable: false # defaults to false
+  unbreedable: false # defaults to false
+  untradable: false # defaults to false
+JustGod:
+  species: arceus
+  level: 100
+  nickname: God
+  growth: ginormous
+  nature: modest
+  ivs: 31/31/31/31/31/31
+  evs: 0/0/0/252/0/252
+  uncatchable: true # defaults to false
+  unbreedable: true # defaults to false
+  untradable: true # defaults to false

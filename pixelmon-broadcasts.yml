@@ -1,5 +1,6 @@
 enabled: true # Setting this to false disables all pixelmon-broadcasts messages.
 discordsrv-hook: true # Setting to false disables ALL discord messages from this config.
+pokebattle-broadcasts: true # Setting this to true causes /pokebattle to also broadcast spawn, catch, and defeat messages.
 # ------------------------------------------------------------------------------- #
 # Welcome to the all-powerful custom broadcast system!
 # This broadcast system allows you to specify pokemon down to the T in order to specify their messages and colours!
@@ -34,8 +35,6 @@ discordsrv-hook: true # Setting to false disables ALL discord messages from this
 # You can test any broadcast by running '/testbroadcast [type] [specIdentifier]'. I.E. '/testbroadcast spawning shiny-ultrabeast'.
 # The command sends the message both in-game and in discord. Placeholders will NOT parse.
 # "show-player-avatar" will not work unless run by a player.
-# ------------------------------------------------------------------------------- #
-# Cloning machine pokemon do not currenly work in spawning broadcasts. Bug report has been submitted.
 # ------------------------------------------------------------------------------- #
 priority: # This list determines what message the pokemon will use if it fits multiple categories. If you do not add it to this list, it will not be registered.
   - 'shiny-species:arceus'

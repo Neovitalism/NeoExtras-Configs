@@ -12,9 +12,9 @@ shiny-booster-affects-legendaries: true
 # Only works on legendaries spawned via the Pixelmon timer.
 shiny-booster-affects-summons: true
 # For every legend that doesn't spawn on the timer. This also includes Ditto from a cloning machine.
-# Note: I physically cannot affect Articuno, Zapdos, Moltres, or Mewtwo/Ditto in 9.0.7. Bug report has been submitted.
+# Note: I physically cannot affect Articuno, Zapdos, or Moltres in 9.0.8. Bug report has been submitted.
 shiny-booster-affects-eggs: true
-# Changes the shiny status on egg creation, not when it's hatched. Broken in 9.0.7. Bug report has been submitted.
+# Changes the shiny status on egg creation, not when it's hatched. Broken in 9.0.8. Bug report has been submitted.
 # No eggs will be affected by NeoExtras regardless of this setting right now. Gotta add masuda method in anyways.
 discordsrv-hook: true
 # Requires a reboot to change. Defaults to true. If you do not have DiscordSRV installed, this will disable automatically.
