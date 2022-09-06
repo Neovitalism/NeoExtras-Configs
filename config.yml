@@ -26,3 +26,5 @@ use-sprite-blacklist-as-whitelist: false
 # Makes the above blacklist do the exact opposite and only allow the sprites listed.
 disallow-sprite-message: "&4This sprite is blacklisted from putting on your head."
 # The message a player recieves when attempting to put a sprite on their head.
+prevent-external-damage: true
+# Prevents pokemon damage from external sources
