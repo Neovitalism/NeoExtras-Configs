@@ -16,6 +16,10 @@ shiny-booster-affects-summons: true
 shiny-booster-affects-eggs: true
 # Changes the shiny status on egg creation, not when it's hatched. Broken in 9.0.8. Bug report has been submitted.
 # No eggs will be affected by NeoExtras regardless of this setting right now. Gotta add masuda method in anyways.
+exp-booster-affects-candies: false
+# Whether or not exp boosters affect exp gained from candies. (Rare Candies, Rare Sodas, Ultra Rare Sodas, Exp. Candies)
+exp-booster-affects-curries: false
+# Whether or not exp boosters affect exp gained from curries.
 discordsrv-hook: true
 # Requires a reboot to change. Defaults to true. If you do not have DiscordSRV installed, this will disable automatically.
 sprite-on-head-blacklist:
