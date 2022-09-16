@@ -17,7 +17,6 @@ shiny-booster-affects-summons: true
 shiny-booster-affects-eggs: true
 # Changes the shiny status on egg creation, not when it's hatched.
 # Also fixes being able to know whether the result is shiny or not when putting the parents in the daycare.
-# No eggs will be affected by NeoExtras regardless of this setting right now. Gotta add masuda method in anyways.
 exp-booster-affects-candies: false
 # Whether or not exp boosters affect exp gained from candies. (Rare Candies, Rare Sodas, Ultra Rare Sodas, Exp. Candies)
 exp-booster-affects-curries: false
