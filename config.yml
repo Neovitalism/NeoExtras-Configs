@@ -3,6 +3,8 @@ prefix: "&#696969[&#6722acN&#793ea5e&#8a599fo&#9c7598E&#ae9191x&#bfac8at&#d1c884
 # This plugin ignores the Ultra Space multiplier in the same config. I may add that functionality in the future, if it's requested.
 shiny-charm-multiplier: 2.0
 exp-charm-multiplier: 2.0
+masuda-method-multiplier: 2.0
+# If the 2 parents OTs are not the same, multiply the shiny rate by this for the egg. Set to 1.0 to disable.
 ticks-to-reboot-global-boosters: 100
 # Ticks until saved global boosters re-start with their time left on server startup. Defaults to 100.
 stack-multipliers: true
@@ -12,9 +14,9 @@ shiny-booster-affects-legendaries: true
 # Only works on legendaries spawned via the Pixelmon timer.
 shiny-booster-affects-summons: true
 # For every legend that doesn't spawn on the timer. This also includes Ditto from a cloning machine.
-# Note: I physically cannot affect Articuno, Zapdos, or Moltres in 9.0.8. Bug report has been submitted.
 shiny-booster-affects-eggs: true
-# Changes the shiny status on egg creation, not when it's hatched. Broken in 9.0.8. Bug report has been submitted.
+# Changes the shiny status on egg creation, not when it's hatched.
+# Also fixes being able to know whether the result is shiny or not when putting the parents in the daycare.
 # No eggs will be affected by NeoExtras regardless of this setting right now. Gotta add masuda method in anyways.
 exp-booster-affects-candies: false
 # Whether or not exp boosters affect exp gained from candies. (Rare Candies, Rare Sodas, Ultra Rare Sodas, Exp. Candies)
